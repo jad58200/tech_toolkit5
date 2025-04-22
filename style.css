@@ -1,0 +1,97 @@
+/* CSS RESET */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(0, 0%, 81%);
+    padding: 2rem;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    padding: 2rem;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+  }
+  
+  .card h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .card p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+  
+  .card h4 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+  }
+  
+  .card-1 {
+    background-color: hsl(263, 55%, 52%);
+  }
+  
+  .card-2 {
+    background-color: hsl(217, 19%, 35%);
+  }
+  
+  .card-3 {
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+  }
+  
+  .card-4 {
+    background-color: hsl(219, 29%, 14%);
+  }
+  
+  .card-5 {
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+  }
+  
+  /* Responsive Layout */
+  @media (min-width: 576px) {
+    .testimonials-grid {
+      max-width: 1110px;
+      margin: auto;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+        "card-1 card-1 card-2 card-5"
+        "card-3 card-4 card-4 card-5";
+    }
+  
+    .card-1 { grid-area: card-1; }
+    .card-2 { grid-area: card-2; }
+    .card-3 { grid-area: card-3; }
+    .card-4 { grid-area: card-4; }
+    .card-5 { grid-area: card-5; }
+  }
+  
